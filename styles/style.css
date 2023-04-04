@@ -1,0 +1,96 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set styles for tech and core */
+.tech {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-image: conic-gradient(blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.core {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-image: conic-gradient(green, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Set styles for the header */
+header {
+  background-color: #dbdbdb;
+  color: #fff;
+  padding: 1em;
+}
+
+#main-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(52, 52, 52);
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1em;
+  color: rgb(80, 80, 80);
+}
+
+/* Set styles for the main content */
+main {
+  padding: 1em;
+}
+
+section {
+  margin-bottom: 2em;
+  display: inline-block;
+  width: 40%;
+}
+
+section h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+section img {
+  width: 100%;
+}
+
+section p {
+  line-height: 1.5;
+  padding-bottom: 2em;
+}
+
+.content {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Set styles for the footer */
+footer {
+  background-color: #eacece;
+  color: #fff;
+  padding: 1em;
+}
+
+/* Media queries for responsive design */
+@media screen and (min-width: 768px) {
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
+section {
+  margin-bottom: 0;
+}
+}
