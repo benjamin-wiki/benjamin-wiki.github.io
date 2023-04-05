@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Benjamin Wiki</title>
+
+  <link rel="stylesheet" href="../styles/blog-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#tech">Tech</a></li>
+        <li><a href="../index.html#core">Core</a></li>
+        <li><a href="../index.html#github">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="tech" class="livid-brown">
+    <h1>What are the differences between relative, absolute, and fixed positioning?</h1>
+    <h5>6 April 2023</h3>
+    <p class="blog-post">
+      In CSS, there are three types of positioning: relative, absolute, and fixed. Each of these types of positioning has its own characteristics and behaviours.
+      <br><br>
+      Relative positioning is used to position an element relative to its normal position in the document flow. When an element is given relative positioning, it is moved from its original position, but the space it would have occupied is still reserved in the document flow. This means that other elements will still be affected by the element's original position. Relative positioning can be applied using <code>position: relative</code>
+      <br><br>
+      Absolute positioning is used to position an element relative to its nearest positioned ancestor, or the initial containing block if there is no positioned ancestor. When an element is given absolute positioning, it is taken out of the document flow and positioned according to its ancestor's position. This means that other elements are not affected by the element's position, and the space it would have occupied is collapsed. Absolute positioning can be applied using <code>position: absolute</code>
+      <br><br>
+      Fixed positioning is used to position an element relative to the viewport, or the browser window. When an element is given fixed positioning, it is taken out of the document flow and positioned according to the viewport, which means it will stay in the same position even when the page is scrolled. This makes fixed positioning useful for creating elements that are always visible, such as headers or footers. Fixed positioning can be applied using <code>position: fixed</code>
+      <br><br><br>
+      I'll try to explain it in simpler terms.
+      <br><br>
+      Okay, imagine your webpage is like a river that flows from top to bottom. You add different elements like text, images, and buttons to the river, and each one is positioned in the river according to its default position in the HTML document flow.
+      <br><br>
+      Now, relative positioning is like taking an element and moving it up or down the river, but leaving the space it occupied in the flow of the river. This means that other elements in the river are still affected by the original space the element occupied.
+      <br><br>
+      Absolute positioning is like taking an element out of the river and placing it on a different part of the page. This means that the element won't affect other elements in the river anymore because it's no longer a part of it.
+      <br><br>
+      Fixed positioning is like taking an element out of the river and placing it on a boat that's floating on the river. The element will always stay in the same position, even if the river is flowing and other elements are moving along with it.
+      <br><br><br>
+      Here's a summary of the differences between these types of positioning:
+      <br><br>
+      * Relative positioning moves an element from its original position, but the space it would have occupied is still reserved in the document flow. 
+      <br><br>
+      * Absolute positioning takes an element out of the document flow and positions it relative to its nearest positioned ancestor. 
+      <br><br>
+      * Fixed positioning takes an element out of the document flow and positions it relative to the viewport, which means it stays in the same position even when the page is scrolled. 
+      <br><br>
+      * Relative and absolute positioning can be used together to create complex layouts. 
+      <br><br>
+      * Fixed positioning is useful for creating elements that are always visible, such as headers or footers. 
+      <br><br>
+    </p>
+    <p>
+      <i class="material-symbols-outlined"><a href="../index.html#tech">
+        arrow_back_ios_new
+      </a>
+      </i>
+    </p>
+  </section>
+
+</body>

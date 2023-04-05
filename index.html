@@ -1,43 +1,74 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Benjamin Wiki</title>
 
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Wiki</title>
-    <link rel="stylesheet" href="./styles/style.css">
-  </head>
- 
-  <body>
-    <header>
-      <h1 id="main-title">Benjamin Wiki</h1>
-      <nav>
-        <ul>          
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#core">Core</a></li>
+        <li><a href="#github">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="foggy-gray">
+    <h1>Benjamin Wiki</h1>
+    <p>What's up my name is Ben! I live in Auckland and am attending Dev Academy to learn how to programme and create my own apps!</p>
+  </section>
+
+  <section id="tech" class="livid-brown">
+    <h1>tech</h1>
+    <a href="./blog/css-concepts.html" class="slide-button1">What are the differences between relative, absolute, and fixed positioning?</a>
+    <a href="./blog/te-houtaewa-template.html" class="slide-button1">Te Houtaewa</a>
+  </section>
+
+  <section id="core" class="medium-carmine">
+    <h1>core</h1>
+    <a href="#" class="slide-button2">Learning Plan</a>
+    <a href="#" class="slide-button2">Identity, Values and Strengths</a>
+  </section>
+
+  <section id="github" class="chestnut-rose">
+    <h1>GitHub</h1>
     
-    <main>
-      <div class="content">
-        <section>
-          <h2 class="tech">Tech</h2>
-          <img src="./images/tech_image.jpeg" alt="Article Image">
-          <p>Click <a href="#">here</a> for tech blogs</p>
-        </section>
+    <p>Check out my latest coding projects and contributions on GitHub!</p>
+      <a href="https://github.com/benjamin-wiki" class="slide-button3"><img src="images/github-mark/github-mark-white.png" alt="GitHub_Logo_White" id="git-logo"> benjamin-wiki</a>
+  </section>
+
+  <script>
+    // Get all the links in the header
+    const navLinks = document.querySelectorAll('header nav a');
+    
+    // Loop through each link and add a click event listener
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault(); // Prevent the default anchor behavior
+        const targetId = link.getAttribute('href'); // Get the target section id
+        const targetSection = document.querySelector(targetId); // Get the target section
+        targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target section
         
-        <section>
-          <h2 class="core">Core</h2>
-          <img src="./images/core_image.jpeg" alt="Article Image">
-          <p>Click <a href="#">here</a> for core blogs</p>
-        </section>
-      </div>
-    </main>
-    
-    <footer>
-      <p>&copy; 2023</p>
-    </footer>
-  </body>
+        // Set the active link
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
 </html>
